@@ -50,35 +50,57 @@ header div i {
 }
 
 main {
-    height: 150vh;
-    background-color: #242424;
     margin-top: 100vh;
     position: relative;
     z-index: 2;
 }
 
-main h1 {
-    color: #FFF;
-    font-size: 4rem;
-    font-weight: 400;
-    padding-top: 10%;
-}
-
 main section {
     width: 100%;
     text-align: center;
-    margin-top: 10%;
 }
 
-main > section > div p{
-    color: #FFF;
-    font-size: 3rem;
+main section div {
+    width: 100%;
+    text-align: center;
+    font-size: 2.3rem;
     font-weight: 400;
 }
 
-main > section > div img {
+main section div:first-child {
+    margin-bottom: 10%;
+}
+
+.technologies{  
+    background-color: #242424;
+    color: #FFF;
+    height: 160vh;
+}
+
+.label {
+    margin: 10% auto;
+    width: 60%;
+    font-size: 2.5rem;
+    font-weight: 400;
+}
+
+.label img {
     width: 200px;
     height: 200px;
+}
+
+.technologies .label p {
+    border: 2px solid #FFF;
+}
+
+.projects {
+    background-color: #FFF;
+    height: 160vh;
+    color: #000;
+}
+
+.projects .label p {
+    border: 2px solid #000;
 }
 
 #arrow {
