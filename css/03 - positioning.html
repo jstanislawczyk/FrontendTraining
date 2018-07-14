@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <style>
+
+            * {
+                margin: 0;
+                padding: 0;
+            }
+
+            .square {
+                height: 100px;
+                width: 100px;
+                background-color: #0F0;
+                display: flex;   
+                flex-wrap: wrap;
+                margin: 20px;
+                float: left;
+            }
+
+            #relative {
+                position: relative;
+                top: 30px;
+                background-color: #F0F;
+            }
+
+            #absolute {
+                position: absolute;
+                background-color: #FF0;
+                z-index: 2;
+                top: 40px;
+                right: 40px;
+            }
+
+            #fixed {
+                position: fixed;
+                background-color: #00F;
+                z-index: 2;
+                top: 40px;
+                left: 0;
+            }
+
+            #sticky {
+                position: sticky;
+                background-color: #000;
+                top: 10px;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div id="sticky" class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div id="fixed" class="square"></div>
+        <div id="relative" class="square"></div>
+        <div id="absolute" class="square"></div>
+    </body>
+</html>
