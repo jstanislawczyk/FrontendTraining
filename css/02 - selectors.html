@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8" />
+        <style>
+            p {
+                color: #F00;
+            }
+            
+            .green {
+                color: #0F0;
+            }
+
+            #blue {
+                color: #00F;
+            }
+
+            a:link, a:visited, a:active {
+                color: #000;
+                text-decoration: none;
+            }
+
+            a:hover {
+                color: #606060;
+            }
+
+            .test {
+                background-color: #AAaA12;
+            }
+
+            .test:first-child {
+                background-color: #135412;
+            } 
+
+            .test:nth-child(2n) {
+                background-color: red;
+            }
+
+            .test:last-child p{
+                background-color: #a1ffa0;
+            }      
+
+            #selectors h1:first-child + p {
+                color: #00F;
+            }
+
+            #selectors > h1{
+                color: #0F0;
+            }
+
+            #selectors h2 ~ p {
+                color: salmon;
+            }
+
+            #selectors h1::first-letter {
+                color: #00F;
+            }
+
+            div div p{
+                color: aquamarine;
+            }
+
+            h2::before  {
+                content: ' something - ';
+            }
+
+            h2::after {
+                content: ' + something';
+            }
+            div[title="title"]{
+                background-color: #333;
+                color: #FFF;
+            }
+        </style>
+    </head>
+    <body>
+        <p>red</p>
+        <p class="green">green</p>
+        <p id="blue">blue</p>
+
+        <a href="https://github.com/xenonso">test link</a>
+        <div>
+            <div class="test">
+                <p>test1</p>
+            </div>
+            
+            <div class="test">
+                <p>test2</p>
+            </div>
+            
+            <div class="test">
+                <p>test3</p>
+            </div>
+        </div>
+
+        <div id="selectors">
+            <h1>Header1</h1>
+            <p>test1</p>
+            <p>test2</p>
+            <h1 class="predecated">Header2</h1>
+            <p>test3</p>
+            <p>test4</p>
+
+            <div>
+                <p>inside</p>
+            </div>
+
+            <h2>smaller header 2</h2>
+            <p>test</p>
+        </div>
+        
+        <div title="title">
+            test
+        </div>
+    </body>
+</html>
