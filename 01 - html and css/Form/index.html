@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+
+    <body>
+        <form method="POST" action="www.samplelinktosamplesite.com/users">
+            <label for="text">Login</label>
+            <input type="text" name="login" placeholder="login" value="test" pattern="[A-Za-z]"/>
+
+            <label for="test_number">Number</label>
+            <input id="test_number" type="number" name="age" value="19" />
+
+            <label for="test_number2">Number</label>
+            <input id="test_number2" type="number" name="age2" value="19" disabled />
+
+            <label for="password">password</label>
+            <input type="password" name="password" placeholder="password" />
+
+            <select name="select" id="select" required>
+                <option value="1" disabled selected>Option 1</option>
+                <option value="2">Option 2</option>
+            </select>
+
+            <label for="color">color</label>
+            <input type="color" name="color" value="#f23455" />
+
+            <label for="date">date</label>
+            <input type="date" name="date" min="1950-01-01" max="2100-01-01" />
+
+            <input class="send" type="submit" value="Send"/>
+            <input class="send" type="reset" value="Clear"/>
+
+            <div>
+                <label>test1</label>
+                <input type="checkbox" id="checkbox" name="checkbox" value="test1" />
+                <label>test2</label>
+                <input type="checkbox" id="checkbox" name="checkbox" value="test2" />
+                <label>test3</label>
+                <input type="checkbox" id="checkbox" name="checkbox" value="test3" />
+            </div>       
+
+            <fieldset>
+                    <legend>Music</legend>  
+                    <label>Rock</label>
+                    <input type="radio" name="music" value="rock" required/>
+                    
+                    <label>Pop</label>
+                    <input type="radio" name="music" value="pop" />
+            </fieldset>
+
+            <label for="range">range</label>
+            <input type="range" name="range" id="range" min="0" max="200" value="30" step="5" />
+
+            <textarea cols="5" rows="3">Test</textarea>
+        </form>
+    </body>
+</html>
