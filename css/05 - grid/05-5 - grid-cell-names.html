@@ -1,0 +1,55 @@
+<!Doctype html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8" />
+        <style>
+            .container {
+                border: 1px solid #00F;
+                margin-bottom: 50px;
+
+                display: grid;
+                grid-template-columns: [jeden] 1fr [dwa] 1fr [trzy] 1fr [cztery] 1fr [piec];
+            }
+
+            .block {
+                border: 1px solid #000;
+                margin: 5px;
+            }
+
+            .block1 {
+                grid-column: jeden / piec;
+            }
+
+            .container2{
+                border: 1px solid #00F;
+
+                display: grid;
+                grid-template-rows: [up-start] 2fr [up-end] 1fr 1fr 1fr 1fr 1fr;
+            }
+
+            .up {
+                grid-row: up-start / up-end;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="block block1">1</div>
+            <div class="block">2</div>
+            <div class="block">3</div>
+            <div class="block">4</div>
+            <div class="block block5">5</div>
+            <div class="block">6</div>
+        </div>
+
+        <div class="container2">
+            <div class="block block11">1</div>
+            <div class="block">2</div>
+            <div class="block">3</div>
+            <div class="block">4</div>
+            <div class="block">5</div>
+            <div class="block up">Góra</div>
+        </div>
+    </body>
+</html>

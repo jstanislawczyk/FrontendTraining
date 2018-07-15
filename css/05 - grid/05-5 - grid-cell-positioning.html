@@ -1,0 +1,60 @@
+<!Doctype html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8" />
+        <style>
+
+            .flex-container {
+                display: flex;
+
+                justify-content: center;
+                align-items: center;
+                height: 90vh;
+            }
+
+            .container {
+                border: 1px solid #00F;
+                height: 500px;
+                width: 600px;
+
+                display: grid;
+                grid-template-columns: 200px 100px 100px;
+                grid-template-rows: 100px 80px;
+
+                justify-content: center;
+                align-content: center;
+
+                justify-items: center;
+                align-items: center;
+            }
+
+            .block {
+                border: 1px solid #000;
+                margin: 5px;
+
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .test {
+                align-self: stretch;
+                justify-self: stretch;
+            }
+            
+        </style>
+    </head>
+
+    <body>
+        <div class="flex-container">
+            <div class="container">
+                <div class="block">1</div>
+                <div class="block">2</div>
+                <div class="block">3</div>
+                <div class="block">4</div>
+                <div class="block">5</div>
+                <div class="block test">6</div>
+            </div>
+        </div>    
+    </body>
+</html>

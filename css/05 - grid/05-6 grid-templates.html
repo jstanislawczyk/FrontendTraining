@@ -1,0 +1,59 @@
+<!Doctype html>
+<html lang="pl">
+    <head>
+        <style>
+            .container {
+                border: 1px solid #00F;
+                padding: 3px;
+                height: 900px;
+
+                display: grid;
+                grid-template-columns: 3fr 1fr;
+                grid-template-rows: 120px 1fr 60px 10%;
+                grid-row-gap: 20px;
+                grid-column-gap: 5px;
+                grid-template-areas: 
+                "header ."
+                "article aside"
+                "nav none"
+                "footer footer";
+            }
+
+            .block {
+                margin: 3px;
+                border: 1px solid #F00;
+            }
+
+            header {
+                grid-area: header;
+            }
+
+            article {
+                grid-area: article; 
+            }
+
+            nav {
+                grid-area: nav;
+            }
+
+            aside {
+                grid-area: aside;
+            }
+
+            footer {
+                grid-area: footer;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="container">
+            <header class="block">Header</header>
+            <article class="block">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla maximus pulvinar ultrices. Pellentesque porttitor gravida pretium. In eget congue ante. </article>
+            <nav class="block">Sample nav</nav>
+            <aside class="block">Sidebar</aside>
+            <footer class="block">Footer</footer>
+            <div>NONE</div>
+        </div>
+    </body>
+</html>

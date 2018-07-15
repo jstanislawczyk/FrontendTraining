@@ -1,0 +1,33 @@
+<!Doctype html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8" />
+        <style>
+            .container {
+                border: 1px solid #00F;
+
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: 100px;
+
+                grid-auto-rows: 200px 100px 50px;
+            }
+
+            .block {
+                border: 1px solid #000;
+                margin: 5px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="block">1</div>
+            <div class="block">2</div>
+            <div class="block">3</div>
+            <div class="block">4</div>
+            <div class="block">5</div>
+            <div class="block">6</div>
+        </div>
+    </body>
+</html>
