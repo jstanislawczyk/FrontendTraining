@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8" />
+
+        <style>
+            .container {
+                border: 1px solid #00F;
+                padding: 3px;
+
+                display: flex;
+                margin-bottom: 20px;
+                height: 80vh;
+                align-items: center;
+                justify-content: space-around;
+            }
+
+            .container div {
+                border: 1px solid #F00;
+                margin: 3px;   
+            }
+
+            .b1 {
+                flex: 1;
+                flex-grow: 5;
+            }
+
+            .b2 {
+                flex: 3;
+                flex-grow: 1;
+            }
+
+            .b3 {
+                flex: 2;
+                flex-grow: 1;
+                align-self: flex-end;
+            }
+
+        </style>
+    </head>
+    
+    <body>
+        <h1>Bloki</h1>
+
+        <div class="container">
+            <div class="b1">
+                <h2>Blok 1</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque condimentum eleifend arcu, vitae scelerisque nibh tincidunt consequat. 
+                    Quisque sodales non lorem vel accumsan. Proin non magna sed justo laoreet ornare quis id ligula. Suspendisse feugiat velit a augue facilisis, ac pharetra risus lacinia. 
+                    Praesent posuere varius tortor, non mattis tortor lobortis sed. Nunc at leo tincidunt, congue velit et, maximus arcu. Praesent nec elit ante. Aliquam erat volutpat.</p>
+            </div>
+
+            <div class="b2">
+                <h2>Blok 2</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque condimentum eleifend arcu, vitae scelerisque nibh tincidunt consequat. 
+                    Quisque sodales non lorem vel accumsan. Proin non magna sed justo laoreet ornare quis id ligula. Suspendisse feugiat velit a augue facilisis, ac pharetra risus lacinia.</p>
+            </div>
+
+            <div class="b3">
+                <h2>Blok 3</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque condimentum eleifend arcu, vitae scelerisque nibh tincidunt consequat. 
+                    Quisque sodales non lorem vel accumsan. Proin non magna sed justo laoreet ornare quis id ligula. Suspendisse feugiat velit a augue facilisis, ac pharetra risus lacinia.</p>
+            </div>
+        </div> 
+    </body>
+</html> 
