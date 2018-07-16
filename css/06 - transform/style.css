@@ -1,0 +1,113 @@
+body {
+	background-color: #191d21;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 20px;
+	color: #efefef;
+}
+
+a:link {
+    color: #fff;
+	text-decoration: none;
+}
+
+a:visited {
+    color: #fff;
+}
+
+a:hover {
+    color: #fff;
+}
+
+a:active {    
+	color: #fff;
+}
+
+header {
+	text-align: center;
+}
+
+.container {
+	display: grid;
+	width: 100%;
+	grid-template-columns: 1fr 1fr;
+
+	justify-content: center;
+    align-content: center;
+
+    justify-items: center;
+    align-items: center;
+}
+
+.postcard p {
+	padding: 5px;
+	margin-top: 10px;
+}
+
+h1 {
+	font-size: 32px;
+	font-weight: 400;
+	color: #FFF;
+}
+
+.photo1 {
+	width: 450px;
+	transition: all 1s ease-in-out; 
+}
+
+.photo1:hover {
+	transform: scale(0.8);
+	opacity: 0.1;
+}
+
+
+.photo2 {
+	width: 450px;
+	transition: transform .9s ease-in-out;
+}
+
+.photo2:hover {
+	transform: scale(0.95) rotate(5deg) skew(10deg, 10deg);
+}
+
+.photo3 {
+	width: 450px;
+}
+
+.photo4 {
+	width: 450px;
+	overflow: hidden;
+}
+
+.photo4 img {
+	transition: all 0.7s ease-in-out;
+}
+
+.photo4:hover img {
+	width: 450px;
+	height: 278px;
+	transform: scale(1.1);
+}
+
+.overlay {
+	position: relative;
+	width: 450px;
+	height: 278px;
+}
+
+.overlay .link1{
+	position: absolute;
+	display: block;
+	width: 450px;
+	line-height: 60px;
+	background-color: #121212;
+	left: 0;
+	bottom: 0;
+	text-align: center;
+	opacity: 0;
+	transition: opacity 0.5s ease-in-out;
+}
+
+.overlay:hover .link1{
+	opacity: 0.8;
+}
+
