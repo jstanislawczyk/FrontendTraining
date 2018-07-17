@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <style>
+
+            * {
+                margin: 0;
+                padding: 0;
+            }
+
+            body {
+                height: 100%;
+                width: 100%;
+            }
+
+            .up {
+                height: 300px;
+                background-color: aqua;
+                width: 100%;
+            }
+
+            .mid {
+                height: 250px;
+                background-color: green;
+                width: 100%;
+            }
+
+            .down {
+                height: 380px;
+                background-color: grey;
+                width: 100%;
+                border-top: 10px solid darkgray;
+                border-bottom: 10px solid darkgray;
+                overflow: hidden;
+            }
+
+            .audi {
+                height: 130px;
+                width: 250px;
+
+                position: relative;
+                top: 100px;
+                left: 10px;
+                animation-name: move;
+                animation-duration: 4s; 
+                animation-fill-mode: both;
+                animation-delay: 1s;
+                animation-iteration-count: infinite;
+                animation-direction: normal;
+                animation-timing-function: ease-in-out;
+            }
+
+             .audi2 {
+                height: 130px;
+                width: 250px;
+
+                position: relative;
+                top: 100px;
+                left: 10px;
+                animation: move 3s both infinite linear, 
+                           jump 0.3s 1.2s ease-in-out;
+            }
+
+            .cloud {
+                height: 250px;
+                width: 400px;
+                position: relative;
+            }
+
+            .cloud:nth-child(1) {
+                width: 230px;
+                top: 100px;
+                animation: cloud 50s linear infinite reverse;
+            }
+
+            .cloud:nth-child(2) {
+                width: 300px;
+                top: 0;
+                opacity: 0.5;
+                animation: cloud 80s linear infinite reverse;
+            }
+
+            @keyframes move {
+                from{transform: translateX(-300px)}
+                to{transform: translateX(2000px)}
+            }
+
+            @keyframes cloud {
+                from{left: 300px}
+                to{left: 50%}
+            }
+
+            @keyframes jump {
+                0% {top: -40px}
+                50% {top: -230px}
+                50% {top: -40px}
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <div class="up">
+            <img class="cloud" src="chmura.png" />
+            <img class="cloud" src="chmura.png" />
+        </div>
+        <div class="mid"></div>
+        <div class="down">
+            <img class="audi" src="Audi-B3.png" />
+            <img class="audi2" src="Audi-B3.png" />
+        </div>
+    </body>
+</html>
