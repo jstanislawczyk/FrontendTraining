@@ -1,0 +1,18 @@
+@mixin test($color, $size) {
+    color: $color;
+    font-size: $size;
+}
+
+@mixin border-empty-mixin() {
+    border: 1px solid black; 
+}
+
+@mixin button($width, $height, $background, $color, $border-radius) {
+    width: $width;
+    height: $height;
+    line-height: $height;
+    text-align: center;
+    background-color: $background;
+    color: $color;
+    border-radius: $border-radius;
+  }

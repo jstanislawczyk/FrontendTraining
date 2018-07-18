@@ -1,0 +1,60 @@
+@import 'reset.scss';
+@import 'zmienne.scss';
+@import 'domieszki.scss';
+
+$test-variable-red: #F00;
+$font-family: sans-serif;
+
+$phone: "only screen and (max-width: 1280px)";
+
+body {
+    font-family: $font-family; 
+}
+
+.wrapper {
+    text-align: center;
+    font-size: 20px;
+
+    h1 {
+        font-size: 30px;
+        font-weight: 600;
+        color: $test-variable-red;
+    }
+
+    h2 {
+        font-size: 25px;
+        font-weight: 600;
+        color: orange;
+
+        + p {
+            color: blue;
+        }
+
+        &:hover {
+            color: violet;
+            cursor: pointer;
+        }
+    }
+
+    h3 {
+        color: $test-variable-red;
+    }
+}
+
+.link {
+    @include test(#AA7732, 40px);
+    @include border-empty-mixin();
+}
+
+button {
+    @include button(120px, 30px, $test-variable-red, #000, 10px);
+}
+
+@media #{$phone}{
+    body {
+        background-color: green;
+    }
+}   
+
+
+
