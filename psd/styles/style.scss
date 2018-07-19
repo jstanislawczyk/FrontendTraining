@@ -1,0 +1,149 @@
+@import 'variables.scss';
+@import 'mixing.scss';
+
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-image: url(../photos/left.png);
+    background-position: center;
+    background-size: cover;
+}
+
+nav {
+    width: 100%;
+    height: 20vh;
+    display: grid;
+    grid-template-columns: 20% 40% 20% 20%;
+    align-items: center;
+    text-align: center;
+    color: $grey-color;
+
+    .burger-menu {
+        
+        & i {
+            font-size: 2rem;
+        }    
+    }
+
+    .logo span{
+        letter-spacing: 3px;
+        color: #FFF;
+        font-size: 0rem;
+        text-transform: uppercase;
+    }
+
+    .info {
+        display: flex;
+        justify-content: center;
+
+        .info-sign {
+            width: 25px;
+            height: 25px;
+            border: 1px solid $grey-color;
+            border-radius: 25px;
+            font-weight: 700;
+            line-height: 25px;
+        }
+    }
+
+    .language {
+
+        & span {
+            font-weight: 700;
+        }
+
+        & i{
+            font-size: 20px;
+        }
+    }
+}
+
+header {
+    width: 100%;
+    height: 80vh;
+
+    display: grid;
+    grid-template-columns: 10% 80% 10%;
+    align-items: center;
+    text-align: center;
+
+    color: $gold-color;
+    font-weight: 700;
+
+    .slider {
+        transform: rotate(90.0deg);
+        letter-spacing: 3px;
+        font-size: 0;
+    }
+
+    .title{
+        height: 100%;
+        text-align: center;
+        align-self: flex-start;
+        position: relative;
+
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        justify-content: center;
+        align-items: center;
+
+        h1 {
+            letter-spacing: 10px;
+            font-size: 2.5rem;
+            text-transform: uppercase;
+        }
+
+        .more {
+            width: 250px;
+            height: 50px;
+            border: 2px solid #FFF;
+
+            color: #FFF;
+            font-weight: 400;
+            font-size: 1rem;
+            line-height: 50px;
+
+            & i {
+                font-size: 0.8rem;
+            }
+        }
+
+        img {
+            height: 50px;
+            width: 50px;
+        }
+
+        .scroll-arrow {
+            & i{
+                color: #FFF;
+                font-size: 3rem;
+                animation: arrow-move 1.5s infinite linear;
+            }
+        }
+
+        .scroll {
+            transform: rotate(90.0deg);
+            color: $grey-color;
+        }
+    }
+
+    .info {
+        transform: rotate(90.0deg);
+        letter-spacing: 2px;
+        font-size: 0;
+    }
+}
+
+@keyframes arrow-move {
+    from {
+        transform: translateY(0px);
+    }
+    to {
+        transform: translateY(15px);
+    }
+}

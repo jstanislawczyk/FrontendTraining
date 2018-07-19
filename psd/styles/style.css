@@ -1,0 +1,99 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  font-family: 'Roboto', sans-serif; }
+
+body {
+  background-image: url(../photos/left.png);
+  background-position: center;
+  background-size: cover; }
+
+nav {
+  width: 100%;
+  height: 20vh;
+  display: grid;
+  grid-template-columns: 20% 40% 20% 20%;
+  align-items: center;
+  text-align: center;
+  color: #9f9f9f; }
+  nav .burger-menu i {
+    font-size: 2rem; }
+  nav .logo span {
+    letter-spacing: 3px;
+    color: #FFF;
+    font-size: 0rem;
+    text-transform: uppercase; }
+  nav .info {
+    display: flex;
+    justify-content: center; }
+    nav .info .info-sign {
+      width: 25px;
+      height: 25px;
+      border: 1px solid #9f9f9f;
+      border-radius: 25px;
+      font-weight: 700;
+      line-height: 25px; }
+  nav .language span {
+    font-weight: 700; }
+  nav .language i {
+    font-size: 20px; }
+
+header {
+  width: 100%;
+  height: 80vh;
+  display: grid;
+  grid-template-columns: 10% 80% 10%;
+  align-items: center;
+  text-align: center;
+  color: #bea67c;
+  font-weight: 700; }
+  header .slider {
+    transform: rotate(90deg);
+    letter-spacing: 3px;
+    font-size: 0; }
+  header .title {
+    height: 100%;
+    text-align: center;
+    align-self: flex-start;
+    position: relative;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    justify-content: center;
+    align-items: center; }
+    header .title h1 {
+      letter-spacing: 10px;
+      font-size: 2.5rem;
+      text-transform: uppercase; }
+    header .title .more {
+      width: 250px;
+      height: 50px;
+      border: 2px solid #FFF;
+      color: #FFF;
+      font-weight: 400;
+      font-size: 1rem;
+      line-height: 50px; }
+      header .title .more i {
+        font-size: 0.8rem; }
+    header .title img {
+      height: 50px;
+      width: 50px; }
+    header .title .scroll-arrow i {
+      color: #FFF;
+      font-size: 3rem;
+      animation: arrow-move 1.5s infinite linear; }
+    header .title .scroll {
+      transform: rotate(90deg);
+      color: #9f9f9f; }
+  header .info {
+    transform: rotate(90deg);
+    letter-spacing: 2px;
+    font-size: 0; }
+
+@keyframes arrow-move {
+  from {
+    transform: translateY(0px); }
+  to {
+    transform: translateY(15px); } }
+
+/*# sourceMappingURL=style.css.map */
