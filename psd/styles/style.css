@@ -58,7 +58,7 @@ header {
     align-self: flex-start;
     position: relative;
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 2fr 2fr 0.5fr 0.8fr 1fr;
     justify-content: center;
     align-items: center; }
     header .title h1 {
@@ -80,20 +80,66 @@ header {
       width: 50px; }
     header .title .scroll-arrow i {
       color: #FFF;
-      font-size: 3rem;
-      animation: arrow-move 1.5s infinite linear; }
-    header .title .scroll {
-      transform: rotate(90deg);
+      font-size: 2rem;
+      animation: arrow-move 1.5s infinite ease-out; }
+    header .title .scroll span {
       color: #9f9f9f; }
   header .info {
     transform: rotate(90deg);
     letter-spacing: 2px;
     font-size: 0; }
 
+main {
+  width: 100%;
+  height: 280vh;
+  background-color: #FFF;
+  color: #000;
+  display: grid;
+  grid-template-rows: 1fr 0.2fr 1fr 0.2fr 1fr; }
+  main .product {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10%;
+    margin: 5% 0; }
+    main .product h2 {
+      font-size: 1.5rem;
+      margin-bottom: 5%;
+      letter-spacing: 3px;
+      text-transform: uppercase; }
+    main .product h3 {
+      font-size: 1.2rem;
+      margin-bottom: 5%;
+      letter-spacing: 2px; }
+    main .product .product-text .more--small {
+      width: 250px;
+      height: 50px;
+      font-weight: 400;
+      font-size: 1rem;
+      font-weight: 700;
+      margin-top: 5%; }
+    main .product .product-text i {
+      font-size: 0.8rem; }
+    main .product .picture img {
+      width: 100%; }
+    main .product .break {
+      width: 100%;
+      height: 100%;
+      border-left: 3px solid #a9946e; }
+    main .product:last-child h2 {
+      text-align: center; }
+    main .product:nth-child(4) .break {
+      border-left: none;
+      border-right: 3px solid #a9946e; }
+
 @keyframes arrow-move {
   from {
     transform: translateY(0px); }
   to {
     transform: translateY(15px); } }
+@media (min-width: 400px) {
+  * {
+    font-size: 25px; } }
 
 /*# sourceMappingURL=style.css.map */
