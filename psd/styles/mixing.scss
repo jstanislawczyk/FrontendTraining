@@ -11,3 +11,34 @@
     background-color: $background-color;
     border: $border;
 }
+
+@mixin logo($font-size) {
+    letter-spacing: 3px;
+    color: #FFF;
+    font-size: $font-size;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+@mixin more-button {
+    width: 250px;
+    height: 50px;
+    border: 2px solid #FFF;
+
+    color: #FFF;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 50px;
+
+    & i {
+        font-size: 15px;
+    }
+}
+
+@mixin center(){
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+}

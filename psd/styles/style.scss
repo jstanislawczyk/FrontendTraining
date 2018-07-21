@@ -9,6 +9,7 @@
 }
 
 body {
+    height: 100%;
     background-image: url(../photos/left.png);
     background-position: center;
     background-size: cover;
@@ -18,7 +19,7 @@ nav {
     width: 100%;
     height: 20vh;
     display: grid;
-    grid-template-columns: 20% 40% 20% 20%;
+    grid-template-columns: 64px 1fr 64px 64px;
     align-items: center;
     text-align: center;
     color: $grey-color;
@@ -31,10 +32,7 @@ nav {
     }
 
     .logo span{
-        letter-spacing: 3px;
-        color: #FFF;
-        font-size: 0rem;
-        text-transform: uppercase;
+        @include logo(0rem);
     }
 
     .info {
@@ -88,9 +86,9 @@ header {
         position: relative;
 
         display: grid;
-        grid-template-rows: 2fr 2fr 0.5fr 0.8fr 1fr;
+        grid-template-rows: 30% 70px 1fr;
         justify-content: center;
-        align-items: center;
+        align-items: flex-end;
 
         h1 {
             letter-spacing: 10px;
@@ -99,38 +97,35 @@ header {
         }
 
         .more {
-            width: 250px;
-            height: 50px;
-            border: 2px solid #FFF;
-
-            color: #FFF;
-            font-weight: 400;
-            font-size: 1rem;
-            line-height: 50px;
-
-            & i {
-                font-size: 0.8rem;
-            }
-        }
-
-        img {
-            height: 50px;
-            width: 50px;
-        }
-
-        .scroll-arrow {
-            & i{
-                color: #FFF;
-                font-size: 2rem;
-                animation: arrow-move 1.5s infinite ease-out;
-            }
+            @include more-button();
         }
 
         .scroll { 
-            & span {
+
+            align-self: center;
+            
+            img {
+                height: 50px;
+                width: 50px;
+            }
+    
+            .scroll_arrow {
+                & i{
+                    color: #FFF;
+                    font-size: 2rem;
+                    animation: arrow-move 1.5s infinite ease-out;
+                }
+            }
+
+            .scroll_text {
+                transform: rotate(90deg);
+                margin-top: 40px;
+            }
+
+            .scroll_text span {
                 color: $grey-color;
             }
-        }
+        }     
     }
 
     .info {
@@ -142,12 +137,12 @@ header {
 
 main {
     width: 100%;
-    height: 280vh;
+    height: auto;
     background-color: #FFF;
     color: #000;
 
     display: grid;
-    grid-template-rows: 1fr 0.2fr 1fr 0.2fr 1fr;
+    grid-template-rows: auto 4rem auto 4rem auto;
 
     .product {
         display: flex;
@@ -155,35 +150,60 @@ main {
         justify-content: center;
         align-items: center;
         padding: 0 10%;
-        margin: 5% 0;
+        margin: 20px 0;
 
         h2{
             font-size: 1.5rem;
-            margin-bottom: 5%;
+            margin-bottom: 20px;
             letter-spacing: 3px;
             text-transform: uppercase;
         }
 
         h3 {
             font-size: 1.2rem;
-            margin-bottom: 5%;
+            margin-bottom: 20px;
             letter-spacing: 2px;
         }
 
         .product-text {
-          
-            .more--small {
-                width: 250px;
-                height: 50px;
-    
-                font-weight: 400;
-                font-size: 1rem;
-                font-weight: 700;
-                margin-top: 5%;
+            & i {
+                font-size: 0.8rem;
+            }
+        }
+
+        .videos {
+
+            display: grid;
+            grid-template-columns: 1fr;
+            justify-content: center;
+            justify-items: center;
+
+            .small-video{
+                width: 270px;
+                height: 270px;
+                border-radius: 50%;
+                border: 1px solid $grey-color;
+                position: relative;
+                margin-bottom: 20px;
+
+                & img {
+                    @include center();
+                }
+            }
+
+            .play {
+                @include center();
+                background-color: $gold-color;
+                width: 20%;
+                height: 20%;
+                border-radius: 50%;
             }
 
             & i {
-                font-size: 0.8rem;
+                font-size: 1.5rem;
+                color: #FFF;
+
+                @include center();
             }
         }
 
@@ -193,12 +213,9 @@ main {
 
         .break{
             width: 100%;
-            height: 100%;
+            height: 4rem;
             border-left: 3px solid $brown-color;
         } 
-
-        &:first-child {
-        }
 
         &:last-child {
             h2 {
@@ -215,6 +232,136 @@ main {
     }
 }
 
+.big-video {
+    height: 100vh;
+    width: 100%;
+    background-image: url(../photos/logs.png);
+    color: #FFF;
+    position: relative;
+
+    .video_info {
+        height: 80%;
+        width: 80%;
+        border: 2px solid $gold-color;
+    
+        @include center;
+
+        .video_text{
+            margin: 20px;
+
+            & h2 {
+                text-transform: uppercase;
+                font-size: 2rem;
+                color: $gold-color; 
+            }
+        
+            & p {
+                margin-top: 20px;
+                font-size: 15px;
+                font-weight: 400;
+            }
+        } 
+
+        .video_button {
+            @include more-button();
+            width: 90%;
+            max-width: 250px;
+            margin: auto;
+            margin-top: 10%;
+            text-align: center;
+        }
+    }   
+}
+
+.about {
+    height: auto;
+    width: 100%;
+    background-color: #FFF;
+    color: #000;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+    padding: 5% 0;
+
+    .about_info {
+        margin: auto;
+        width: 80%;
+
+        & h2 {
+            font-size: 2rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+
+        & p {
+            margin-top: 30px;
+            font-size: 15px;
+        }
+    }
+
+    .about_picture {
+        text-align: center;
+
+        & img{
+            width: 80%;
+        }
+    }
+}
+
+footer {
+    height: auto;
+    width: 100%;
+    background-image: url(../photos/footer.png);
+    color: #2c2c2c;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+
+    .footer-info span {
+        color: #7d7d7d;
+        font-weight: 700;
+    }
+
+    .footer-info:first-child {
+        order: 2;
+    }
+
+    .footer-info:nth-child(2) {
+        @include logo(2rem);
+        grid-column-start: 1;
+        grid-column-end: 3;
+        order: 1;
+    }
+
+    .footer-info:last-child {
+        grid-column-end: 3;
+        order: 3;
+    }
+}
+
+.more--small {
+    width: 250px;
+    height: 50px;
+
+    font-weight: 400;
+    font-size: 1rem;
+    font-weight: 700;
+    margin-top: 30px;
+}
+
+.more--small::after {
+    content: ""; 
+    display: block;
+    margin: 0 auto 0 0;
+    width: 15%; 
+    padding-top: 5px; 
+    border-bottom: 2px solid $gold-color;
+}
+
 @keyframes arrow-move {
     from {
         transform: translateY(0px);
@@ -224,12 +371,17 @@ main {
     }
 }
 
+@media (orientation: landscape) {
+    header {
+        height: 150vh;
+    }
 
-@media (min-width: 400px) {
-    * {
-        font-size: 25px;
+    .big-video {
+        height: 130vh;
     }
 }
+
+@media (min-width: 400px) { }
 
 @media (min-width: 576px) { }
 
