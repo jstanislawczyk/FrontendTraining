@@ -51,9 +51,11 @@ header {
   color: #bea67c;
   font-weight: 700; }
   header .slider {
-    transform: rotate(90deg);
-    letter-spacing: 3px;
-    font-size: 0; }
+    letter-spacing: 3px; }
+    header .slider .slider_number {
+      font-size: 0; }
+    header .slider .slider_dots i {
+      font-size: 0; }
   header .title {
     height: 100%;
     text-align: center;
@@ -127,8 +129,8 @@ main {
       justify-content: center;
       justify-items: center; }
       main .product .videos .small-video {
-        width: 270px;
-        height: 270px;
+        width: 200px;
+        height: 200px;
         border-radius: 50%;
         border: 1px solid #9f9f9f;
         position: relative;
@@ -138,7 +140,9 @@ main {
           top: 50%;
           left: 50%;
           transform: translate(-50%, -50%);
-          position: absolute; }
+          position: absolute;
+          width: 180px;
+          height: 180px; }
       main .product .videos .play {
         position: absolute;
         top: 50%;
@@ -163,8 +167,21 @@ main {
       width: 100%;
       height: 4rem;
       border-left: 3px solid #a9946e; }
-    main .product:last-child h2 {
+    main .product:last-child p {
+      margin-bottom: 30px;
       text-align: center; }
+    main .product:last-child h2 {
+      font-size: 2.3rem;
+      text-align: center;
+      position: relative; }
+    main .product:last-child h2:after {
+      content: "";
+      background: #bea67c;
+      position: absolute;
+      bottom: -10px;
+      left: calc(50% - 20px);
+      width: 40px;
+      height: 4px; }
     main .product:nth-child(4) .break {
       border-left: none;
       border-right: 3px solid #a9946e; }
@@ -201,7 +218,7 @@ main {
       width: 60%;
       max-width: 250px;
       margin: auto;
-      margin-top: 20px;
+      margin-top: 40px;
       margin-bottom: 5%;
       text-align: center; }
       .big-video .video_info .video_button i {
@@ -310,14 +327,15 @@ footer {
   .big-video .video_info {
     position: relative; }
     .big-video .video_info .video_text {
-      -webkit-filter: blur(0.000001px);
+      filter: blur(0.000001px);
       margin-left: 20%;
       position: relative; }
       .big-video .video_info .video_text h2 {
-        width: 60%;
+        width: 80%;
         display: block;
         position: relative; }
         .big-video .video_info .video_text h2:before {
+          filter: blur(0.000001px);
           content: "";
           background: #FFF;
           position: absolute;
@@ -329,6 +347,7 @@ footer {
         width: 60%;
         position: relative; }
         .big-video .video_info .video_text p:before {
+          filter: blur(0.000001px);
           content: "";
           background: #bea67c;
           position: absolute;
@@ -337,6 +356,7 @@ footer {
           width: 30px;
           height: 4px; }
       .big-video .video_info .video_text:after {
+        filter: blur(0.000001px);
         content: "";
         background: #FFF;
         position: absolute;
@@ -346,5 +366,70 @@ footer {
         width: 1px; }
     .big-video .video_info .video_button {
       margin-left: 20%; } }
+@media screen and (min-width: 992px) {
+  header {
+    grid-template-columns: 20% 60% 20%; }
+    header .slider {
+      position: relative;
+      font-size: 3rem;
+      display: inline; }
+      header .slider .slider_number {
+        font-size: 3rem;
+        transform: rotate(90deg);
+        margin-bottom: 50px; }
+      header .slider .slider_number:before {
+        content: "";
+        background: #bea67c;
+        position: absolute;
+        top: 30px;
+        left: -30px;
+        width: 60px;
+        height: 5px; }
+      header .slider .slider_dots i {
+        display: block;
+        margin-bottom: 30px;
+        font-size: 0.5rem;
+        color: #3d3d3d; }
+      header .slider .slider_dots i:first-child {
+        color: #bea67c; }
+
+  main .product:last-child .videos {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 100px; }
+
+  .big-video {
+    max-height: 100vh; }
+    .big-video .video_info {
+      padding-top: 15%;
+      padding-bottom: 15%; }
+
+  .about {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr; }
+    .about .about_info {
+      order: 2;
+      margin-left: 70px;
+      width: 50%;
+      position: relative; }
+    .about .about_picture {
+      order: 1;
+      text-align: right;
+      position: relative; }
+    .about .about_info:after {
+      content: "";
+      background: #bea67c;
+      position: absolute;
+      top: 45%;
+      left: -60px;
+      height: 5px;
+      width: 40px; }
+    .about .about_picture:after {
+      content: "";
+      background: #000;
+      position: absolute;
+      top: 30%;
+      right: -50px;
+      height: 1px;
+      width: 100px; } }
 
 /*# sourceMappingURL=style.css.map */
