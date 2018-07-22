@@ -393,9 +393,74 @@ footer {
       header .slider .slider_dots i:first-child {
         color: #bea67c; }
 
-  main .product:last-child .videos {
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 100px; }
+  main .product {
+    flex-wrap: nowrap;
+    margin-top: 5%; }
+    main .product .product-text {
+      text-align: left;
+      margin-right: 30px;
+      margin-top: 5%;
+      width: 65%; }
+      main .product .product-text h2 {
+        margin-right: 0;
+        margin-left: auto;
+        text-align: left;
+        width: 60%; }
+      main .product .product-text p {
+        margin-right: 0;
+        margin-left: auto;
+        text-align: left;
+        width: 60%;
+        font-size: 0.7rem; }
+      main .product .product-text .more--small {
+        margin-left: auto;
+        margin-right: 5%;
+        width: 55%; }
+    main .product .picture {
+      margin-right: 10%; }
+    main .product:nth-child(3) {
+      display: flex; }
+      main .product:nth-child(3) .product-text {
+        order: 1;
+        text-align: right;
+        margin-top: 5%; }
+        main .product:nth-child(3) .product-text h2 {
+          margin-left: 0;
+          text-align: right;
+          width: 60%; }
+        main .product:nth-child(3) .product-text p {
+          margin-left: 0;
+          text-align: right;
+          width: 60%;
+          font-size: 0.7rem; }
+        main .product:nth-child(3) .product-text .more--small {
+          text-align: right;
+          margin-right: 0;
+          width: 55%;
+          position: relative; }
+        main .product:nth-child(3) .product-text .more--small::after {
+          content: "";
+          background: #bea67c;
+          position: absolute;
+          top: 30px;
+          left: 80px;
+          width: 40px;
+          height: 0.5px; }
+      main .product:nth-child(3) .picture {
+        order: -1; }
+    main .product:last-child .videos {
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 100px; }
+    main .product:last-child .product-text {
+      margin-top: 0; }
+      main .product:last-child .product-text h2 {
+        text-align: center;
+        margin: auto;
+        margin-bottom: 30px; }
+      main .product:last-child .product-text p {
+        text-align: center;
+        margin: auto;
+        margin-bottom: 20px; }
 
   .big-video {
     max-height: 100vh; }

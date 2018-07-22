@@ -539,11 +539,109 @@ footer {
     }  
     
     main {
-        
+        .product {
+            flex-wrap: nowrap;
+            margin-top: 5%;
+            
+            .product-text {
+                text-align:left;  
+                margin-right: 30px;
+                margin-top: 5%;
+                width:65%;
 
-        .product:last-child .videos{
-            grid-template-columns: 1fr 1fr 1fr;
-            grid-gap: 100px;
+                h2 {
+                    margin-right: 0;
+                    margin-left: auto;
+                    text-align:left;  
+                    width: 60%;
+                }
+
+                p {
+                    margin-right: 0;
+                    margin-left: auto;
+                    text-align:left;  
+                    width: 60%;
+                    font-size: 0.7rem;
+                }
+
+                .more--small {
+                    margin-left: auto;
+                    margin-right: 5%;
+                    width: 55%;
+                }
+            } 
+            
+            .picture {
+                margin-right: 10%;
+            }
+
+            &:nth-child(3){
+                display: flex;
+
+                .product-text {
+                    order: 1;
+                    text-align: right;  
+                    margin-top: 5%;  
+
+                    h2 {
+                        margin-left: 0;
+                        text-align: right; 
+                        width: 60%;
+                    }
+    
+                    p {
+                        margin-left: 0;
+                        text-align: right; 
+                        width: 60%;
+                        font-size: 0.7rem;
+                    }
+    
+                    .more--small {
+                        text-align: right; 
+                        margin-right: 0;
+                        width: 55%;
+                        position: relative;
+                    } 
+                    
+                    .more--small::after {
+                        content:""; 
+                        background: $gold-color; 
+                        position: absolute; 
+                        top: 30px; 
+                        left: 80px; 
+                        width: 40px; 
+                        height: 0.5px;
+                    }
+                }
+
+                .picture {
+                    order: -1;
+                }
+            }
+            
+            &:last-child {
+                .videos{
+                    grid-template-columns: 1fr 1fr 1fr;
+                    grid-gap: 100px;
+                }
+
+                .product-text {
+                    margin-top: 0;
+
+                    h2 {
+                        text-align: center;
+                        margin: auto;
+                        margin-bottom: 30px;
+                    }
+
+                    p {
+                        text-align: center;
+                        margin: auto;
+                        margin-bottom: 20px;
+                    }
+                }
+            }
+                
         }
     }
 
