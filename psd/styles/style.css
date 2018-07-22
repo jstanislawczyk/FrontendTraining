@@ -284,7 +284,8 @@ footer {
   margin-left: 0;
   width: 55%;
   position: relative;
-  font-weight: 700; }
+  font-weight: 700;
+  margin-bottom: 20px; }
 
 .more--small::after {
   content: "";
@@ -401,6 +402,7 @@ footer {
     flex-wrap: nowrap;
     margin-top: 5%; }
     main .product .product-text {
+      position: relative;
       text-align: left;
       margin-right: 30px;
       margin-left: 5%;
@@ -422,14 +424,33 @@ footer {
         margin-left: auto;
         margin-right: 5%;
         width: 55%; }
+    main .product:first-child .product-text h2:after {
+      content: "";
+      background: #000;
+      position: absolute;
+      top: 15px;
+      left: 0;
+      height: 1px;
+      width: 35%; }
+    main .product:first-child .product-text p:after {
+      content: "";
+      background: #bea67c;
+      position: absolute;
+      top: 60px;
+      left: 25%;
+      height: 3px;
+      width: 10%; }
     main .product .picture {
       margin-right: 10%; }
     main .product:nth-child(3) {
-      display: flex; }
+      display: flex;
+      position: relative; }
       main .product:nth-child(3) .product-text {
         order: 1;
         text-align: right;
-        margin-top: 5%; }
+        margin-top: 5%;
+        margin-left: 0;
+        padding-left: 0; }
         main .product:nth-child(3) .product-text h2 {
           margin-left: 0;
           text-align: right;
@@ -439,6 +460,8 @@ footer {
           text-align: right;
           width: 60%;
           font-size: 0.7rem; }
+        main .product:nth-child(3) .product-text h3 {
+          margin-right: 5%; }
         main .product:nth-child(3) .product-text .more--small {
           text-align: left;
           margin-left: 95px;
@@ -446,7 +469,24 @@ footer {
           position: relative; }
       main .product:nth-child(3) .picture {
         order: -1;
-        margin-left: 5%; }
+        margin-left: 5%;
+        margin-right: 0; }
+      main .product:nth-child(3) .product-text h2:after {
+        content: "";
+        background: #000;
+        position: absolute;
+        top: 15px;
+        right: 5%;
+        height: 1px;
+        width: 30%; }
+      main .product:nth-child(3) .product-text p:after {
+        content: "";
+        background: #bea67c;
+        position: absolute;
+        top: 60px;
+        right: 25%;
+        height: 3px;
+        width: 10%; }
     main .product:last-child .videos {
       grid-template-columns: 1fr 1fr 1fr;
       grid-gap: 100px; }

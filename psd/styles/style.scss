@@ -375,6 +375,7 @@ footer {
     width: 55%;
     position: relative;
     font-weight: 700;
+    margin-bottom: 20px;
 } 
 
 .more--small::after {
@@ -549,6 +550,7 @@ footer {
             margin-top: 5%;
             
             .product-text {
+                position: relative;
                 text-align: left;  
                 margin-right: 30px;
                 margin-left: 5%;
@@ -577,6 +579,26 @@ footer {
                     width: 55%;
                 }
             } 
+
+            &:first-child .product-text h2:after {
+                content:""; 
+                background: #000; 
+                position: absolute; 
+                top: 15px; 
+                left: 0; 
+                height: 1px; 
+                width: 35%;
+            } 
+
+            &:first-child .product-text p:after {
+                content:""; 
+                background: $gold-color; 
+                position: absolute; 
+                top: 60px; 
+                left: 25%; 
+                height: 3px; 
+                width: 10%;
+            } 
             
             .picture {
                 margin-right: 10%;
@@ -584,11 +606,14 @@ footer {
 
             &:nth-child(3){
                 display: flex;
+                position: relative;
 
                 .product-text {
                     order: 1;
                     text-align: right;  
-                    margin-top: 5%;  
+                    margin-top: 5%;
+                    margin-left: 0;  
+                    padding-left: 0;  
 
                     h2 {
                         margin-left: 0;
@@ -602,6 +627,10 @@ footer {
                         width: 60%;
                         font-size: 0.7rem;
                     }
+                    
+                    h3{
+                        margin-right: 5%;
+                    }
     
                     .more--small {
                         text-align: left; 
@@ -614,7 +643,28 @@ footer {
                 .picture {
                     order: -1;
                     margin-left: 5%;
+                    margin-right: 0;
                 }
+
+                .product-text h2:after {
+                    content:""; 
+                    background: #000; 
+                    position: absolute; 
+                    top: 15px; 
+                    right: 5%; 
+                    height: 1px; 
+                    width: 30%;
+                } 
+    
+                .product-text p:after {
+                    content:""; 
+                    background: $gold-color; 
+                    position: absolute; 
+                    top: 60px; 
+                    right: 25%; 
+                    height: 3px; 
+                    width: 10%;
+                } 
             }
             
             &:last-child {
