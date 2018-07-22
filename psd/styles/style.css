@@ -164,9 +164,11 @@ main {
     main .product .picture img {
       width: 100%; }
     main .product .break {
-      width: 100%;
-      height: 4rem;
-      border-left: 3px solid #a9946e; }
+      width: 90%;
+      height: 3.5rem;
+      border-left: 3px solid #a9946e;
+      margin-left: auto;
+      margin-right: auto; }
     main .product:last-child p {
       margin-bottom: 30px;
       text-align: center; }
@@ -278,20 +280,20 @@ footer {
     order: 3; }
 
 .more--small {
-  width: 250px;
-  height: 50px;
-  font-weight: 400;
-  font-size: 1rem;
-  font-weight: 700;
-  margin-top: 30px; }
+  text-align: left;
+  margin-left: 0;
+  width: 55%;
+  position: relative;
+  font-weight: 700; }
 
 .more--small::after {
   content: "";
-  display: block;
-  margin: 0 auto 0 0;
-  width: 15%;
-  padding-top: 5px;
-  border-bottom: 2px solid #bea67c; }
+  background: #bea67c;
+  position: absolute;
+  top: 30px;
+  left: 0;
+  width: 40px;
+  height: 3px; }
 
 @keyframes arrow-move {
   from {
@@ -369,6 +371,8 @@ footer {
 @media screen and (min-width: 992px) {
   header {
     grid-template-columns: 20% 60% 20%; }
+    header .title div h1 {
+      font-size: 6rem; }
     header .slider {
       position: relative;
       font-size: 3rem;
@@ -399,6 +403,7 @@ footer {
     main .product .product-text {
       text-align: left;
       margin-right: 30px;
+      margin-left: 5%;
       margin-top: 5%;
       width: 65%; }
       main .product .product-text h2 {
@@ -413,6 +418,7 @@ footer {
         width: 60%;
         font-size: 0.7rem; }
       main .product .product-text .more--small {
+        margin-top: 20px;
         margin-left: auto;
         margin-right: 5%;
         width: 55%; }
@@ -434,20 +440,13 @@ footer {
           width: 60%;
           font-size: 0.7rem; }
         main .product:nth-child(3) .product-text .more--small {
-          text-align: right;
-          margin-right: 0;
+          text-align: left;
+          margin-left: 95px;
           width: 55%;
           position: relative; }
-        main .product:nth-child(3) .product-text .more--small::after {
-          content: "";
-          background: #bea67c;
-          position: absolute;
-          top: 30px;
-          left: 80px;
-          width: 40px;
-          height: 0.5px; }
       main .product:nth-child(3) .picture {
-        order: -1; }
+        order: -1;
+        margin-left: 5%; }
     main .product:last-child .videos {
       grid-template-columns: 1fr 1fr 1fr;
       grid-gap: 100px; }
