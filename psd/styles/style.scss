@@ -101,7 +101,6 @@ header {
         }
 
         .scroll { 
-
             align-self: center;
             
             img {
@@ -110,6 +109,7 @@ header {
             }
     
             .scroll_arrow {
+
                 & i{
                     color: #FFF;
                     font-size: 2rem;
@@ -233,18 +233,17 @@ main {
 }
 
 .big-video {
-    height: 100vh;
-    width: 100%;
+    height: auto;
+    width: 80%;
     background-image: url(../photos/logs.png);
     color: #FFF;
-    position: relative;
+    padding: 10%;
+    overflow: hidden;
 
     .video_info {
         height: 80%;
-        width: 80%;
+        width: 100%;
         border: 2px solid $gold-color;
-    
-        @include center;
 
         .video_text{
             margin: 20px;
@@ -264,10 +263,11 @@ main {
 
         .video_button {
             @include more-button();
-            width: 90%;
+            width: 60%;
             max-width: 250px;
             margin: auto;
-            margin-top: 10%;
+            margin-top: 20px;
+            margin-bottom: 5%;
             text-align: center;
         }
     }   
@@ -371,22 +371,108 @@ footer {
     }
 }
 
-@media (orientation: landscape) {
-    header {
-        height: 150vh;
-    }
+@media screen and (orientation: landscape) {
+    
+}
 
-    .big-video {
-        height: 130vh;
+@media screen and (max-width: 290px){
+    * {
+        font-size: 12px;
     }
 }
 
-@media (min-width: 400px) { }
+@media screen and (max-height: 500px) {
+    .scroll_text {
+        display: none;
+    }
 
-@media (min-width: 576px) { }
+    .scroll_mouse {
+        display: none;
+    }
+}
 
-@media (min-width: 768px) { }
+@media screen and (max-width: 400px) {
+    .scroll_text {
+        display: none;
+    }
 
-@media (min-width: 992px) { }
+    .scroll_mouse {
+        display: none;
+    }
+}
 
-@media (min-width: 1200px) { }
+@media screen and  (min-width: 400px) { }
+
+@media screen and  (min-width: 576px) {}
+
+@media screen and  (min-width: 768px) { 
+    
+    nav .logo span{
+        @include logo(2rem);
+    }
+
+    header .title div h1 {
+        font-size: 5rem;
+    }
+
+    .big-video{
+        .video_info {
+            position: relative;
+
+            .video_text {
+                -webkit-filter: blur(0.000001px);
+                
+                margin-left: 20%;
+                position: relative;
+                h2{
+                    width: 60%;
+                    display: block;
+                    position: relative;
+
+                    &:before {
+                        content:""; 
+                        background: #FFF; 
+                        position: absolute; 
+                        top: 20px; 
+                        left: -90px; 
+                        width: 70px; 
+                        height: 1px;
+                    }
+                }
+        
+                p {
+                    width: 60%;
+                    position: relative;
+
+                    &:before {
+                        content:""; 
+                        background: $gold-color; 
+                        position: absolute; 
+                        top: 10px; 
+                        left: -50px; 
+                        width: 30px; 
+                        height: 4px;
+                    }
+                }
+
+                &:after {
+                    content:""; 
+                    background: #FFF; 
+                    position: absolute; 
+                    top: 50%; 
+                    right: 0; 
+                    height: 100px; 
+                    width: 1px;
+                }
+            }    
+      
+            .video_button {
+                margin-left: 20%;
+            }
+        }    
+    } 
+}
+
+@media screen and (min-width: 992px) { }
+
+@media screen and (min-width: 1200px) { }
