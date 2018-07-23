@@ -542,10 +542,6 @@ footer {
     }
 }
 
-@media screen and  (min-width: 400px) { }
-
-@media screen and  (min-width: 576px) {}
-
 @media screen and  (min-width: 768px) and (min-height: 600px) { 
     nav .logo span{
         @include logo(3rem);
