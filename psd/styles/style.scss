@@ -46,17 +46,17 @@ nav {
     position: relative;
     z-index: 2;
 
-    .burger-menu {
+    .nav_burger-menu {
         & i {
             font-size: 2rem;
         }    
     }
 
-    .logo span{
+    .nav_logo span{
         @include logo(0rem);
     }
 
-    .menu {
+    .nav_menu {
         ul {
             list-style-type: none;
             margin: 0;
@@ -85,7 +85,7 @@ nav {
         }
     }
 
-    .info {
+    .nav_info {
         display: flex;
         justify-content: center;
 
@@ -99,7 +99,7 @@ nav {
         }
     }
 
-    .language {
+    .nav_language {
 
         & span {
             font-weight: 700;
@@ -548,11 +548,11 @@ footer {
 }
 
 @media screen and  (min-width: 768px) and (min-height: 600px) { 
-    nav .logo span{
+    nav .nav_logo span{
         @include logo(3rem);
     }
 
-    nav .logo span:after{
+    nav .nav_logo span:after{
         @include logo-strike();
     }
 }
@@ -1026,11 +1026,11 @@ footer {
     nav {
         grid-template-columns: 10% 1fr 1fr 100px 100px;
 
-        .logo {
+        .nav_logo {
             justify-self: end;
         }
 
-        .menu {
+        .nav_menu {
             justify-self: start;
         }
     }

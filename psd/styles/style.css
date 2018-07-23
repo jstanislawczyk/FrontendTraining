@@ -36,23 +36,23 @@ nav {
   color: #9F9F9F;
   position: relative;
   z-index: 2; }
-  nav .burger-menu i {
+  nav .nav_burger-menu i {
     font-size: 2rem; }
-  nav .logo span {
+  nav .nav_logo span {
     letter-spacing: 10px;
     color: #FFF;
     font-size: 0rem;
     text-transform: uppercase;
     font-weight: 700;
     position: relative; }
-  nav .menu ul {
+  nav .nav_menu ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden; }
-  nav .menu li {
+  nav .nav_menu li {
     float: left; }
-  nav .menu li a {
+  nav .nav_menu li a {
     text-transform: uppercase;
     font-weight: 700;
     font-size: 1rem;
@@ -62,21 +62,21 @@ nav {
     padding: 16px;
     padding-left: 70px;
     text-decoration: none; }
-  nav .menu li a:hover {
+  nav .nav_menu li a:hover {
     color: #7D7D7D; }
-  nav .info {
+  nav .nav_info {
     display: flex;
     justify-content: center; }
-    nav .info .info-sign {
+    nav .nav_info .info-sign {
       width: 25px;
       height: 25px;
       border: 1px solid #9F9F9F;
       border-radius: 25px;
       font-weight: 700;
       line-height: 25px; }
-  nav .language span {
+  nav .nav_language span {
     font-weight: 700; }
-  nav .language i {
+  nav .nav_language i {
     font-size: 20px; }
 
 header {
@@ -402,7 +402,7 @@ footer {
   .scroll_mouse {
     display: none; } }
 @media screen and (min-width: 768px) and (min-height: 600px) {
-  nav .logo span {
+  nav .nav_logo span {
     letter-spacing: 10px;
     color: #FFF;
     font-size: 3rem;
@@ -410,7 +410,7 @@ footer {
     font-weight: 700;
     position: relative; }
 
-  nav .logo span:after {
+  nav .nav_logo span:after {
     position: absolute;
     content: "";
     background: #BEA67C;
@@ -738,9 +738,9 @@ footer {
 @media screen and (min-width: 1300px) and (min-height: 600px) {
   nav {
     grid-template-columns: 10% 1fr 1fr 100px 100px; }
-    nav .logo {
+    nav .nav_logo {
       justify-self: end; }
-    nav .menu {
+    nav .nav_menu {
       justify-self: start; }
 
   header .title .scroll {
