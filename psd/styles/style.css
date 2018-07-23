@@ -149,6 +149,7 @@ main {
   height: auto;
   background-color: #FFF;
   color: #000;
+  overflow-x: hidden;
   display: grid;
   grid-template-rows: auto 4rem auto 4rem auto; }
   main .product {

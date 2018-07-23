@@ -205,7 +205,8 @@ main {
     width: 100%;
     height: auto;
     background-color: #FFF;
-    color: #000;
+    color:#000;
+    overflow-x: hidden;
 
     display: grid;
     grid-template-rows: auto 4rem auto 4rem auto;
@@ -687,7 +688,6 @@ footer {
 }
 
 @media screen and (min-width: 992px) {
-
     body {
         .background {
             background-image: url(../photos/left.png);
