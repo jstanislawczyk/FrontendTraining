@@ -700,11 +700,11 @@ footer {
         top: -300%;
         right: 0;
         opacity: 0.05; }
-    .about .about_product_picture {
+    .about .about_picture {
       order: 1;
       text-align: right;
       position: relative; }
-      .about .about_product_picture:after {
+      .about .about_picture:after {
         content: "";
         background: #000;
         position: absolute;
@@ -712,7 +712,7 @@ footer {
         right: -50px;
         height: 1px;
         width: 100px; }
-      .about .about_product_picture .shadow_about {
+      .about .about_picture .shadow_about {
         position: absolute;
         font-size: 10rem;
         text-transform: uppercase;
