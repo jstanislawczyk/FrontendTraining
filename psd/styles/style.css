@@ -466,12 +466,13 @@ footer {
           width: 1px; }
       .big-video .video_info .video_button {
         margin-left: 20%; }
-    .big-video i {
+    .big-video img {
       position: absolute;
-      top: -5%;
+      height: 100%;
+      top: 0;
       right: 0;
       font-size: 45rem;
-      opacity: 0.05; } }
+      opacity: 0.3; } }
 @media screen and (min-width: 992px) and (min-height: 600px) {
   header {
     grid-template-columns: 20% 60% 20%; }

@@ -564,6 +564,7 @@ footer {
 
     .big-video{
         position: relative;
+        
         .video_info {
             position: relative;
 
@@ -622,12 +623,13 @@ footer {
             }
         }   
         
-        & i {
+        & img {
             position: absolute;
-            top: -5%;
+            height: 100%;
+            top:0;
             right: 0;
             font-size: 45rem;
-            opacity: 0.05;
+            opacity: 0.3;
         }
     } 
 }
