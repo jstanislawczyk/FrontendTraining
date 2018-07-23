@@ -221,7 +221,7 @@ main {
         .break{
             width: 90%;
             height: 3.5rem;
-            border-left: 3px solid $brown-color;
+            border-left: 3px solid $dark-gold-color;
             margin-left: auto;
             margin-right: auto;
         } 
@@ -252,7 +252,7 @@ main {
         &:nth-child(4) {
             .break {
                 border-left: none;
-                border-right: 3px solid $brown-color;
+                border-right: 3px solid $dark-gold-color;
             }
         }              
     }
@@ -262,6 +262,7 @@ main {
     height: auto;
     width: 80%;
     background-image: url(../photos/logs.png);
+    background: cover;
     color: #FFF;
     padding: 10%;
     overflow: hidden;
@@ -269,7 +270,7 @@ main {
     .video_info {
         height: 80%;
         width: 100%;
-        border: 2px solid $gold-color;
+        border: 1px solid #FFF;
 
         .video_text{
             margin: 20px;
@@ -363,6 +364,10 @@ footer {
         order: 1;
     }
 
+    .footer-info:nth-child(2):after{
+        @include logo-strike();
+    }
+
     .footer-info:last-child {
         grid-column-end: 3;
         order: 3;
@@ -371,11 +376,11 @@ footer {
 
 .more--small {
     text-align: left; 
-    margin-left: 0;
     width: 55%;
     position: relative;
     font-weight: 700;
-    margin-bottom: 20px;
+
+    margin: 20px auto 30px 0;
 } 
 
 .more--small::after {
@@ -437,6 +442,10 @@ footer {
         @include logo(2rem);
     }
 
+    nav .logo span:after{
+        @include logo-strike();
+    }
+
     header .title div h1 {
         font-size: 5rem;
     }
@@ -461,8 +470,8 @@ footer {
                         background: #FFF; 
                         position: absolute; 
                         top: 20px; 
-                        left: -90px; 
-                        width: 70px; 
+                        left: -110px; 
+                        width: 90px; 
                         height: 1px;
                     }
                 }
@@ -523,7 +532,7 @@ footer {
 
             .slider_number:before {
                 content:""; 
-                background: $gold-color; 
+                background: $dark-gold-color; 
                 position: absolute; 
                 top: 30px; 
                 left: -30px; 
@@ -555,6 +564,7 @@ footer {
                 margin-right: 30px;
                 margin-left: 5%;
                 margin-top: 5%;
+                margin: 5% 30px auto 5%;
                 width: 65%;
 
                 h2 {
@@ -592,7 +602,7 @@ footer {
 
             &:first-child .product-text p:after {
                 content:""; 
-                background: $gold-color; 
+                background: $dark-gold-color; 
                 position: absolute; 
                 top: 60px; 
                 left: 25%; 
@@ -633,17 +643,14 @@ footer {
                     }
     
                     .more--small {
-                        text-align: left; 
-                        margin-left: 95px;
                         width: 55%;
-                        position: relative;
                     } 
                 }
 
                 .picture {
                     order: -1;
                     margin-left: 5%;
-                    margin-right: 0;
+                    margin-right: 1%;
                 }
 
                 .product-text h2:after {
@@ -658,7 +665,7 @@ footer {
     
                 .product-text p:after {
                     content:""; 
-                    background: $gold-color; 
+                    background: $dark-gold-color; 
                     position: absolute; 
                     top: 60px; 
                     right: 25%; 
@@ -695,10 +702,23 @@ footer {
 
     .big-video {
         max-height: 100vh;
-        .video_info {
-            padding-top: 15%;
-            padding-bottom: 15%;
+        padding: 5% 10%;
+        .video_info { 
+            .video_text {
+                h2 {
+                    margin-top: 15%;
+                }
+
+                p {
+                    width: 35%;
+                }
+            }
+
+            .video_button {
+                margin-bottom: 10%;
+            }
         }
+
     }
 
     .about {
@@ -720,7 +740,7 @@ footer {
 
         .about_info:after {
             content:""; 
-            background: $gold-color; 
+            background: $dark-gold-color; 
             position: absolute; 
             top: 45%; 
             left: -60px; 
@@ -761,4 +781,11 @@ footer {
     }
 }
 
-@media screen and (min-width: 1200px) { }
+@media screen and (min-width: 1200px) {
+    main {
+        .product {
+            margin-left: 5%;
+            margin-right: 5%;
+        }
+    }
+}

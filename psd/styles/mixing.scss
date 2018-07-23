@@ -18,7 +18,20 @@
     font-size: $font-size;
     text-transform: uppercase;
     font-weight: 700;
+    position: relative;
 }
+
+@mixin logo-strike() {
+    position: absolute;
+    content:""; 
+    background: $gold-color; 
+    position: absolute; 
+    top: 20px; 
+    left: 35px; 
+    width: 50px; 
+    height: 3px;
+}
+
 
 @mixin more-button {
     width: 250px;
