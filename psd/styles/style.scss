@@ -239,7 +239,6 @@ main {
         }
 
         .videos {
-
             display: grid;
             grid-template-columns: 1fr;
             justify-content: center;
@@ -269,7 +268,7 @@ main {
             }
 
             & i {
-                font-size: 1.5rem;
+                font-size: 1.2rem;
                 color: #FFF;
 
                 @include center();
@@ -384,7 +383,7 @@ main {
         
             & p {
                 margin-top: 20px;
-                font-size: 15px;
+                font-size: 0.8rem;
                 font-weight: 400;
             }
         } 
@@ -427,7 +426,7 @@ main {
 
         & p {
             margin-top: 30px;
-            font-size: 15px;
+            font-size: 0.8rem;
         }
     }
 
@@ -440,6 +439,11 @@ main {
     }
 
     .shadow_about {
+        position: relative;
+        font-size: 0;
+    }
+
+    .shadow_a {
         position: relative;
         font-size: 0;
     }
@@ -532,7 +536,7 @@ footer {
     }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 300px) {
     .scroll_text {
         display: none;
     }
@@ -1031,5 +1035,17 @@ footer {
     
     header .title .scroll {
         justify-self: start;
+    }
+}
+
+@media screen and (min-width: 2600px) and (min-height: 1200px) {
+    * {
+        font-size: 40px;
+    }
+}
+
+@media screen and (min-width: 3000px) and (min-height: 1800px) {
+    * {
+        font-size: 50px;
     }
 }

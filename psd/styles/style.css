@@ -201,7 +201,7 @@ main {
         height: 20%;
         border-radius: 50%; }
       main .product .videos i {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         color: #FFF;
         position: absolute;
         top: 50%;
@@ -274,7 +274,7 @@ main {
         color: #BEA67C; }
       .big-video .video_info .video_text p {
         margin-top: 20px;
-        font-size: 15px;
+        font-size: 0.8rem;
         font-weight: 400; }
     .big-video .video_info .video_button {
       width: 250px;
@@ -313,12 +313,15 @@ main {
       letter-spacing: 3px; }
     .about .about_info p {
       margin-top: 30px;
-      font-size: 15px; }
+      font-size: 0.8rem; }
   .about .about_picture {
     text-align: center; }
     .about .about_picture img {
       width: 80%; }
   .about .shadow_about {
+    position: relative;
+    font-size: 0; }
+  .about .shadow_a {
     position: relative;
     font-size: 0; }
 
@@ -391,7 +394,7 @@ footer {
 
   .scroll_mouse {
     display: none; } }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 300px) {
   .scroll_text {
     display: none; }
 
@@ -740,5 +743,11 @@ footer {
 
   header .title .scroll {
     justify-self: start; } }
+@media screen and (min-width: 2600px) and (min-height: 1200px) {
+  * {
+    font-size: 40px; } }
+@media screen and (min-width: 3000px) and (min-height: 1800px) {
+  * {
+    font-size: 50px; } }
 
 /*# sourceMappingURL=style.css.map */
