@@ -88,13 +88,13 @@ header {
   text-align: center;
   color: #BEA67C;
   font-weight: 700; }
-  header .slider {
+  header .header_slider {
     letter-spacing: 3px; }
-    header .slider .slider_number {
+    header .header_slider .slider_number {
       font-size: 0; }
-    header .slider .slider_dots i {
+    header .header_slider .slider_dots i {
       font-size: 0; }
-  header .title {
+  header .header_title {
     height: 100%;
     text-align: center;
     align-self: flex-start;
@@ -103,11 +103,11 @@ header {
     grid-template-rows: 30% 70px 1fr;
     justify-content: center;
     align-items: flex-end; }
-    header .title h1 {
+    header .header_title h1 {
       letter-spacing: 10px;
       font-size: 2.5rem;
       text-transform: uppercase; }
-    header .title .more {
+    header .header_title .title_more {
       width: 250px;
       height: 50px;
       border: 2px solid #FFF;
@@ -115,21 +115,21 @@ header {
       font-weight: 400;
       font-size: 18px;
       line-height: 50px; }
-      header .title .more i {
+      header .header_title .title_more i {
         font-size: 15px; }
-    header .title .scroll {
+    header .header_title .title_scroll {
       align-self: center; }
-      header .title .scroll img {
+      header .header_title .title_scroll img {
         height: 50px;
         width: 50px; }
-      header .title .scroll .scroll_arrow i {
+      header .header_title .title_scroll .scroll_arrow i {
         color: #FFF;
         font-size: 2rem;
         animation: arrow-move 1.5s infinite ease-out; }
-      header .title .scroll .scroll_text {
+      header .header_title .title_scroll .scroll_text {
         transform: rotate(90deg);
         margin-top: 40px; }
-      header .title .scroll .scroll_text span {
+      header .header_title .title_scroll .scroll_text span {
         color: #9F9F9F; }
   header .header_info {
     color: #A9946E;
@@ -420,7 +420,7 @@ footer {
     width: 30%;
     height: 5px; } }
 @media screen and (min-width: 768px) {
-  header .title div h1 {
+  header .header_title div h1 {
     font-size: 5rem; }
 
   .big-video {
@@ -477,19 +477,19 @@ footer {
 @media screen and (min-width: 992px) and (min-height: 600px) {
   header {
     grid-template-columns: 20% 60% 20%; }
-    header .title div h1 {
+    header .header_title div h1 {
       font-size: 6rem;
       letter-spacing: 20px; }
-    header .slider {
+    header .header_slider {
       position: relative;
       font-size: 3rem;
       display: inline;
       top: 5%; }
-      header .slider .slider_number {
+      header .header_slider .slider_number {
         font-size: 3rem;
         transform: rotate(90deg);
         margin-bottom: 50px; }
-      header .slider .slider_number:before {
+      header .header_slider .slider_number:before {
         content: "";
         background: #A9946E;
         position: absolute;
@@ -497,12 +497,12 @@ footer {
         left: 0;
         width: 60px;
         height: 5px; }
-      header .slider .slider_dots i {
+      header .header_slider .slider_dots i {
         display: block;
         margin-bottom: 30px;
         font-size: 0.5rem;
         color: #3d3d3d; }
-      header .slider .slider_dots i:first-child {
+      header .header_slider .slider_dots i:first-child {
         color: #BEA67C; }
     header .header_info {
       position: relative;
@@ -743,7 +743,7 @@ footer {
     nav .nav_menu {
       justify-self: start; }
 
-  header .title .scroll {
+  header .title .title_scroll {
     justify-self: start; } }
 @media screen and (min-width: 2600px) and (min-height: 1200px) {
   * {

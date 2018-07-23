@@ -123,7 +123,7 @@ header {
     color: $gold-color;
     font-weight: 700;
 
-    .slider {
+    .header_slider {
         letter-spacing: 3px;
         
         .slider_number{
@@ -135,7 +135,7 @@ header {
         }
     }
 
-    .title{
+    .header_title{
         height: 100%;
         text-align: center;
         align-self: flex-start;
@@ -152,11 +152,11 @@ header {
             text-transform: uppercase;
         }
 
-        .more {
+        .title_more {
             @include more-button();
         }
 
-        .scroll { 
+        .title_scroll { 
             align-self: center;
             
             img {
@@ -559,7 +559,7 @@ footer {
 
 @media screen and  (min-width: 768px) { 
 
-    header .title div h1 {
+    header .header_title div h1 {
         font-size: 5rem;
     }
 
@@ -639,12 +639,12 @@ footer {
     header {
         grid-template-columns: 20% 60% 20%;
 
-        .title div h1{
+        .header_title div h1{
             font-size: 6rem;
             letter-spacing: 20px;
         }
 
-        .slider {
+        .header_slider {
             position: relative;
             font-size: 3rem;
             display: inline;
@@ -1035,7 +1035,7 @@ footer {
         }
     }
     
-    header .title .scroll {
+    header .title .title_scroll {
         justify-self: start;
     }
 }
