@@ -746,8 +746,11 @@ footer {
     justify-self: start; } }
 @media screen and (min-width: 2600px) and (min-height: 1200px) {
   * {
-    font-size: 40px; } }
+    font-size: 30px; } }
 @media screen and (min-width: 3000px) and (min-height: 1800px) {
+  * {
+    font-size: 40px; } }
+@media screen and (min-width: 3500px) and (min-height: 2300px) {
   * {
     font-size: 50px; } }
 
