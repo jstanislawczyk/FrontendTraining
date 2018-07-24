@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8" />
+</head>
+
+<body>
+    <button onclick="standard()">Run</button>
+    <button onclick="withReturnedValue()">Return value</button>
+    <button id="test">Closure</button>
+    test
+
+
+    <script>
+            (function () {
+                alert("This is IIFE");
+            })();
+    
+            function standard() {
+                alert("this is standard function");
+            }
+    
+            function withReturnedValue() {
+                alert("This function uses returned value=" + returnValue(3));
+            }
+    
+            function returnValue(i) {
+                return i;
+            }
+    
+            let size = useSize(62);
+    
+            function useSize(size) {
+                return function () {
+                    document.body.style.fontSize = size + 'px';
+                };
+            }
+    
+            document.getElementById('test').onclick = size;
+        </script>
+
+</body>
+
+</html>
