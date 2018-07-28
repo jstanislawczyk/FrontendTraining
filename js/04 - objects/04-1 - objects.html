@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8" />
+    
+    <style>
+        
+    </style>
+</head>
+
+<body>
+    
+    <button id="button">Objects</button>
+        
+    <script>
+        document.getElementById("button").addEventListener("click", objects);
+
+        let customObject = {
+            firstName: "Jan",
+            age: 33,
+            testPrint: function() {
+                console.log("custom method in my object [name = " + this.firstName + "]");
+            }
+        }
+
+        customObject.anotherPrint = function() {
+            console.log("external method [name = " + this.firstName + "]");
+
+        }
+
+        function objects() {
+            let tab = [10, 11, 12];
+            console.log(tab.length + " " + tab);
+
+            let text = "test";
+            console.log(text.charAt(3));
+
+            console.log(Math.round(24.7));
+
+            console.log(new Date().getFullYear());
+
+            console.log("");
+
+            console.log(customObject);
+            customObject.testPrint();
+            customObject.anotherPrint();
+
+            console.log("Delete object field");            
+            delete customObject.anotherPrint;
+            customObject.anotherPrint;
+
+        }       
+    </script>
+
+</body>
+
+</html>
