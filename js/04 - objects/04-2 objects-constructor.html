@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8" />
+    
+    <style>
+        
+    </style>
+</head>
+
+<body>
+    
+    <button id="button">Objects</button>
+        
+    <script>
+        document.getElementById("button").addEventListener("click", objects);
+
+        let customObject = {
+            firstName: "Jan",
+            age: 33,
+            testPrint: function() {
+                console.log("custom method in my object [name = " + this.firstName + "]");
+            }           
+        }
+
+        function CustomObject(firstName, age) {
+            this.firstName = firstName;
+            this.age = age;
+
+            this.testPrint = function() {
+                console.log("constructor method in my object [name = " + this.firstName + "]");
+            }   
+        }
+
+        function objects() {
+            let object = new CustomObject("Constructor", 33);
+            console.log(object);
+            object.testPrint();
+        }       
+    </script>
+
+</body>
+
+</html>
