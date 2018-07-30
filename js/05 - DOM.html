@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var testId = document.getElementById("testId");
+            console.log("get by ID");
+            console.log(testId);
+            console.log("");
+
+            var testClass = document.getElementsByClassName("testClass");
+            console.log("get by class");
+            console.log(testClass[0]);
+            console.log("");
+
+            var h3 = document.getElementsByTagName('h3');
+            console.log("get by html tag");
+            console.log(h3[0]);
+            console.log("");
+
+            var testQuery = document.querySelector("ol li");
+            console.log("get by query selector");
+            console.log(testQuery);
+            console.log("");
+
+            var testQueryAll = document.querySelectorAll('ol li');
+            console.log("get all by query selector");
+            console.log(testQuery);
+            console.log("");
+
+            document.querySelectorAll('ol li')[3].innerHTML = 'changed';
+            console.log("get 3rd element with query")
+        }, false );
+    </script>
+</head>
+<body>
+    <div id="testId"></div>
+    <div class="testClass"></div>
+    <h3>test</h3>
+
+    <div id="test"></div>
+
+    <ol>
+        <li> li 1 </li>
+        <li> li 2 </li>
+        <li> li 3 </li>
+        <li> li 4 </li>
+        <li> li 5 </li>
+    </ol>
+</body>
+</html>
