@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <style>
+        button {
+            width: 20%;
+            height: 100px;
+            margin-bottom: 50px;
+        }
+
+        #testId {
+            background-color: red;
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="onclick">click</button>
+
+    <div id="testId"></div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            console.log("on start");
+        });
+
+        document.getElementById("onclick").addEventListener("click", function myTest() {
+            console.log("test");
+        });
+
+        document.getElementById("testId").addEventListener("mouseover", function myTest2() {
+            console.log("on mouse out");
+        });
+    </script>
+</body>
+
+</html>
