@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+</head>
+
+<body>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {       
+            setCookie("test", "value", 15);
+            
+            console.log(document.cookie);
+            console.log(getCookie("test"));
+
+            deleteCookie("test");
+  
+            console.log(document.cookie);
+        }); 
+
+        function setCookie(name, value, days) {
+            var date = new Date;
+            date.setTime(date.getTime() + 24*60*60*1000*days);
+            document.cookie = name + "=" + value + ";path=/;expires=" + date.toGMTString();
+        }
+
+        function getCookie(name) {
+            let value = document.cookie.match('(^|;) ?' + name + '=([^;]*)(;|$)');
+            return value ? value[2] : null;
+        }
+
+        function deleteCookie(name) { 
+            setCookie(name, '', -1); 
+        }
+    </script>
+</body>
+
+</html>
