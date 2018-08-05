@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+</head>
+
+<body>
+    <script>
+        const text = "test othertest";
+        const regexp = new RegExp("test?");
+        console.log(regexp.test(text));
+        console.log("");
+
+        const text2 = "cat dog";
+        const regexp2 = /cat/;
+        console.log(regexp2.test(text2));
+        console.log("");
+
+        const upperCaseText = "TeSt";      
+        const lowerCaseText = "test";
+        const regexp3 = new RegExp("test?", "i");
+        console.log(regexp3.test(lowerCaseText));
+        console.log(regexp3.test(upperCaseText));
+        console.log("");
+
+        const text4 = "Drzewo4";
+        const regexp4 = new RegExp("^D[e-z]{5}4$");
+        console.log(regexp4.test(text4));
+        console.log("");
+
+        const regexp5 = /te/g;
+        const results = regexp5.exec("sstesttetetrr");
+        console.log(results[0]);
+        console.log(results.index);
+        console.log(results.input);
+        console.log(results.length);
+
+        console.log(regexp5.lastIndex);
+        console.log(regexp5.multiline);
+        console.log(regexp5.ignoreCase);
+        console.log(regexp5.source);
+        console.log("");
+
+        let regexp6 = /te*/g;
+        let text6 = "testessteggte";
+        let myArray;
+
+        while ((myArray = regexp6.exec(text6)) !== null) {
+            let msg = "Found: " + myArray[0] + " " + "Next starts at: " + regexp6.lastIndex;
+            console.log(msg);
+        }
+    </script>
+</body>
+
+</html>
