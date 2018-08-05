@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+</head>
+
+<body>
+    <script>
+        function test(name){
+            return name;
+        }
+        
+        console.log(typeof test.prototype); 
+        console.log(typeof test.prototype.constructor);
+        console.log(test.prototype.constructor('test constructor'));
+
+        /**************************************************************/
+        console.log("\nclassic");
+
+        function Class(name){
+            this.name = name;
+        }
+
+        Class.prototype.getName = function (){
+            return this.name + ' is an object';
+        }
+
+        let testVar = new Class('this');
+
+        console.log(testVar);
+
+        /**************************************************************/
+        console.log("\nprototype set");
+
+        function Person (firstName) {
+            this.firstName = firstName;
+        }
+
+        Person.prototype.getFirstName = function () {
+            return this.firstName;
+        }
+
+        function Child (firstName, lastName) {
+            //calls constructor    
+            Person.call(this, firstName);
+
+            this.lastName = lastName;
+        }
+
+        Child.prototype = Object.create(Person.prototype);
+        var child = new Child('John', 'Smith');
+
+        console.log(child);
+        console.log(child.firstName);
+        console.log(child.lastName);
+        console.log(typeof child.getFirstName);
+
+    </script>
+</body>
+
+</html>
