@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <script>
+        console.log(this);
+
+        function run() {
+            return this;
+        };
+
+        console.log(run());
+
+        function run2() {
+            "use strict";
+            return this;
+        };
+
+        console.log(run2());
+
+        var object = {
+            field: "custom object",
+            customMethod: function() {
+                return this;
+            }
+        };
+
+        console.log(object.customMethod());
+        
+        console.log("\nCall / apply");
+
+        const object2 = {
+            test2: "custom object2",
+            method: function() {
+                console.log(this, arguments);
+            }
+        };
+
+        const object3 = {
+            test3: "custom object3"
+        };
+
+        object2.method(1, 2);
+        object2.method.call(object3, 1, 2);
+        object2.method.apply(object3, [1,2]);
+
+        console.log("\nBind");
+        const refference = object2.method.bind(object3, 1, 2);
+        refference(3,4);
+        setTimeout(refference);
+
+        console.log("\nCall test");
+
+        let test = {
+            name: 'testName',
+
+            print: function () {
+                console.log(this.name);
+            }
+        }
+
+        let print = function () {
+            console.log('Print ' + this.name);
+        };
+
+        let testImpl1 = {
+            name: 'Impl1'
+        };
+
+        let testImpl2 = {
+            name: 'Impl2'
+        };
+
+        print.call(testImpl1);
+        print.call(testImpl2);  
+
+        console.log("\nBind test");
+
+        let bind1 = print.bind(testImpl1);
+        bind1();
+
+        let bind2 = print.bind(testImpl2);
+        bind2()
+
+    </script>
+</head>
+
+<body>
+</body>
+</html>
