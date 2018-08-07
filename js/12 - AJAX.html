@@ -8,6 +8,8 @@
 <body>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
+            console.log("Http request");    
+
             let request = new XMLHttpRequest();
             request.open('GET', 'https://jsonplaceholder.typicode.com/posts/1', true);
             request.send();
@@ -42,6 +44,11 @@
             badRequest.onerror = function() {
                 console.log('connection error :/');
             };
+
+            
+            fetch('https://jsonplaceholder.typicode.com/todos/10')
+                .then(response => response.json())
+                .then(json => console.log(json))
         });
     </script>
 </body>
