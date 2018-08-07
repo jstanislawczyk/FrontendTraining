@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+</head>
+
+<body>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            sessionStorage.setItem('sessionKey', 'sessionValue');
+            console.log(sessionStorage.getItem('sessionKey'));
+            
+            localStorage.setItem('localKey', 'localValue');
+            console.log(localStorage.getItem('localKey'));
+
+            console.log(localStorage);
+            console.log(sessionStorage);
+
+            //clear key
+            localStorage.removeItem('localKey');
+            console.log(localStorage.getItem('localKey'));
+
+            //clear all keys in storage
+            sessionStorage.clear();
+            console.log(sessionStorage);
+        });
+    </script>
+</body>
+
+</html>
