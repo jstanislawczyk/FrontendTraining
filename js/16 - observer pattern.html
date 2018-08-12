@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+</head>
+
+<body>
+    <script>
+        let OBSERVER = (function () {
+
+            let subscribers = [];
+
+            let subscribe = function (subscriber) {
+                subscribers.push(subscriber);
+                console.log(`subscribers: ${subscribers}`);
+            };
+
+            let unsubscribe = function (subscriber) {
+                let index = subscribers.indexOf(subscriber);
+                if (index > -1) {
+                    subscribers.splice(index, 1);
+                }
+                console.log(`subscribers: ${subscribers}`);
+            };
+
+            let printAll = function () {
+                for (let i = 0; i < subscribers.length; i++) {
+                    console.log(`subscriber ${i}: ${subscribers[i]}`);
+                }
+            };
+
+            return {
+                subscribe: subscribe,
+                unsubscribe: unsubscribe,
+                printAll: printAll,
+            };
+        })();
+
+        function Observer(name) {
+            let firstName = name;
+
+            return {
+                info: function () {
+                    console.log(`Subscriber: ${firstName}`);
+                }
+            };
+        }
+
+        let subscriber1 = new Observer('test1');
+        let subscriber2 = new Observer('test2');
+
+        subscriber1.info();
+        subscriber2.info();
+
+        OBSERVER.subscribe(subscriber1);
+        OBSERVER.subscribe(subscriber2);
+
+        console.log('\nsubscribed');
+        OBSERVER.printAll();
+
+        OBSERVER.unsubscribe(subscriber1);
+
+        console.log('\nunsubscribed');
+        OBSERVER.printAll();
+
+    </script>
+</body>
+
+</html>
