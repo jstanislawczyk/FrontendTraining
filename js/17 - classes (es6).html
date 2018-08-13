@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+</head>
+
+<body>
+    <script>
+        class Rectangle {
+            constructor(height, width) {
+                this.height = height;
+                this.width = width;
+            }
+
+            get area() {
+                return this.calcArea();
+            }
+
+            calcArea() {
+                return this.height * this.width;
+            }
+
+            static print() {
+                console.log('this is static method');
+            }
+        }
+
+        class Cube extends Rectangle {
+            constructor(height, width, depth) {    
+                super(height, width);
+                this.depth = depth;
+            }
+
+            calcArea() {
+                return this.height * this.width * this.depth;
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            let rectangle = new Rectangle(7,8);
+            console.log(rectangle.area);
+            Rectangle.print();
+
+            let cube = new Cube(3,4,6);
+            console.log(cube.area);
+        });
+    </script>
+</body>
+
+</html>
