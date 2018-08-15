@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+</head>
+
+<body>
+    <script>
+        const symbol1 = Symbol();
+        const symbol2 = Symbol(2);
+
+        console.log(symbol1);
+        console.log(symbol2);
+        console.log(Symbol(1) === Symbol(2));
+
+        console.log('\nwrap symbol with object');
+        let symbol = Symbol('object-test');
+        let objectSymbol = Object(symbol)
+        console.log(typeof(objectSymbol));
+        
+        let notGlobalSymbol = Symbol('not global');
+        let globalSymbol = Symbol.for('global');
+        console.log('\n');
+        console.log(Symbol.keyFor(globalSymbol));
+        console.log(Symbol.keyFor(notGlobalSymbol));
+        console.log(Symbol.for('test') === Symbol.for('test'));
+        
+    </script>
+</body>
+
+</html>
