@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+</head>
+
+<body>
+    <script>
+        function logInfo(first, second = 'default') {
+            console.log(`${first} ${second}`);
+        }
+
+        logInfo('This is');
+        logInfo('This is', 'custom');
+
+        function test(a = 5) {
+            console.log(`${a} -> ${typeof a}`);
+        }
+        
+        console.log('\ntypeof');
+        test();
+        test(20);
+        test(undefined); //this is default value
+        test(null);
+        test('test');
+
+        function order(a = 10, b) {
+            return [a, b];
+        }
+
+        console.log('\norder');
+        console.log(order());
+        console.log(order(17));
+
+        function testingReference(a = myTest()) {
+            function myTest() {
+                console.log('works');
+            }
+        }
+
+        console.log('\nShould throw error');
+        console.log(testingReference()); //Reference Error
+    </script>
+</body>
+
+</html>
