@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+</head>
+
+<body>
+    <script>
+        console.log('Spread parameters');
+
+        function multiply(x, y, z) {
+            console.log(x*y*z);
+        }
+
+        let numbers = [2, 3, 4];
+
+        multiply(...numbers);
+
+        let tab = ['text2', 'text3'];
+        let mainTab = ['text1', ...tab, 'text4', 'text5'];
+
+        console.log(mainTab);
+
+        /******************************************************/
+
+        console.log('\nRest parameters');
+
+        function sum(...numbers) {
+            let sum = 0;
+            numbers.forEach((number) => {
+                sum += number;
+            });
+
+            return sum;
+        }
+
+        console.log(sum(1, 2, 3, 4));
+        console.log(sum(100, 1000));
+        console.log(sum(33));
+    </script>
+</body>
+
+</html>
