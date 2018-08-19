@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8" />
+
+    <script type="module">
+        import {print} from './mainModule.js';
+        import {test, test2 as changed} from './secondaryModule.js';
+        
+        document.addEventListener("DOMContentLoaded", function(){
+            print();
+            test();
+            changed();
+        });
+    </script>
+</head>
+
+<body>
+    
+</body>
+
+</html>
