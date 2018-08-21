@@ -10,3 +10,10 @@ h1 {
   top: 50%;
   text-align: center;
 }
+
+h2 {
+  color: #fff;
+  position: relative;
+  top: 50%;
+  text-align: center;
+}
