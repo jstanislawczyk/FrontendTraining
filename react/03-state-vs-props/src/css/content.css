@@ -1,0 +1,6 @@
+section {
+    height: calc(70vh - 100px);
+    padding: 50px;
+    color: #000;
+    text-align: center
+}
