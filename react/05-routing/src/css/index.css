@@ -1,0 +1,39 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+header {
+  height: 20vh;
+  width: 100%;
+  background-color: #252525;
+  text-align: center;
+  line-height: 20vh;
+  font-size: 3rem;
+  color: #fff;
+}
+
+section {
+  height: 70vh;
+  text-align: center;
+}
+
+footer {
+  height: 10vh;
+  width: 100%;
+  background-color: #353535;
+  text-align: center;
+  line-height: 10vh;
+  font-size: 1rem;
+  color: #fff;
+}
+
+button {
+  width: 100px;
+  height: 50px;
+  background-color: #555;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
