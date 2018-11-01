@@ -1,3 +1,26 @@
-<h1>home</h1>
+<h1 [class.gray]="h1Style">{{ home }}</h1>
+
+<h2 [ngClass]="{
+    'gray': h1Style,
+    'large': !h1Style
+}">Multiple class</h2>
+
+<h3 [ngStyle]="{
+    'color': h1Style ? 'gray' : 'black',
+    'font-size': !h1Style ? '1em' : '4em'
+}">Inline style</h3>
 
 <button (click)="firstClick()">Click me</button>
+<br />
+<button (click)="dataServiceClick()">DataService click</button>
+
+<br /><br />
+
+<h2>Users</h2>
+
+<ul *ngIf="users">
+    <li *ngFor="let user of users.data">
+        <img [src]="user.avatar" />
+        <p>{{ user.first_name}} {{ user.last_name }}</p>
+    </li>
+</ul>

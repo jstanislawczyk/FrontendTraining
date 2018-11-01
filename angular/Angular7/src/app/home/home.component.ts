@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'app-home',
@@ -7,13 +8,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  h1Style: boolean = false;
+  home: string = 'Home';
+
+  users: Object;
+
+  constructor(private data: DataService) { }
 
   ngOnInit() {
+    this.data.getUsers().subscribe(data => {
+      this.users = data
+    })
+  }
+
+  dataServiceClick() {
+    this.data.externalFirstClick();
   }
 
   firstClick() {
-    console.log('clicked')
+    this.h1Style = !this.h1Style;
+    this.home = 'Changed home';
   }
 
 }
